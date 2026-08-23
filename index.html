@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Skills Academy — Build job-ready data, software and AI skills</title>
+<meta name="description" content="Practical, project-based courses in data science, AI and programming. Write real code in the browser, ship portfolio projects, and practise the interview.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/dsa.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ==================================================================== -->
+<!-- HEADER                                                               -->
+<!-- ==================================================================== -->
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><rect x="1" y="9" width="3.4" height="7" rx="1" fill="#0A0D08"/><rect x="6.8" y="5" width="3.4" height="11" rx="1" fill="#0A0D08"/><rect x="12.6" y="1" width="3.4" height="15" rx="1" fill="#0A0D08"/></svg>
+      </span>
+      <span class="brand-name">Data Skills Academy<small>Learn by building</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#paths">Specializations</a>
+      <a href="#courses">Courses</a>
+      <a href="#lab">Playgram</a>
+      <a href="#interview">Interview Prep</a>
+      <a href="#blog">Blog</a>
+    </nav>
+
+    <div class="hdr-end">
+      <button class="icon-btn" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4 14 14" stroke-linecap="round"/></svg>
+      </button>
+      <a class="btn ghost sm desktop-only" href="/logusers/login/">Log in</a>
+      <a class="btn sm" href="/logusers/register_user/">Start free</a>
+      <button class="icon-btn burger" data-burger aria-expanded="false" aria-label="Menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" data-drawer>
+  <a href="#paths">Specializations</a>
+  <a href="#courses">Courses</a>
+  <a href="#lab">Playgram</a>
+  <a href="#interview">Interview Prep</a>
+  <a href="#institutions">For Institutions</a>
+  <a href="#blog">Blog</a>
+  <a class="btn ghost" href="/logusers/login/">Log in</a>
+</div>
+
+<main id="main">
+
+<!-- ==================================================================== -->
+<!-- HERO                                                                 -->
+<!-- ==================================================================== -->
+<section class="hero">
+  <div class="wrap hero-in">
+
+    <div class="hero-copy">
+      <span class="eyebrow rv">Data · AI · Software engineering</span>
+
+      <h1 class="rv" data-d="1">Stop watching tutorials.<br>Start <span class="hl">shipping code</span>.</h1>
+
+      <p class="hero-sub rv" data-d="2">
+        Practical courses in data science, AI and programming — written by working
+        engineers, run entirely in your browser. Every lesson ends in code you
+        wrote yourself, graded the moment you submit.
+      </p>
+
+      <div class="hero-cta rv" data-d="3">
+        <a class="btn lg" href="/logusers/register_user/">
+          Start Learning Free
+          <svg class="arw" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg>
+        </a>
+        <a class="btn ghost lg" href="#institutions">For Institutions</a>
+      </div>
+
+      <p class="hero-note rv" data-d="4">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11.7 3.9 5.4 10.2 2.3 7.1"/></svg>
+        No credit card · No install · Free tier stays free
+      </p>
+
+      <dl class="hero-trust rv" data-d="5">
+        <div><dt><span data-count="180" data-suffix="+">0</span></dt><dd>Hands-on topics across 11 tracks</dd></div>
+        <div><dt><span data-count="5" data-suffix="">0</span></dt><dd>Career specializations with real projects</dd></div>
+        <div><dt><span data-count="4.9" data-dp="1">0</span>/5</dt><dd>Average learner rating</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-visual rv" data-d="2">
+      <div class="editor">
+        <div class="editor-bar">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="editor-file">quickstart.py</span>
+          <span class="editor-badge">Live</span>
+        </div>
+        <pre class="code"><span class="ln"><span class="k">import</span> pandas <span class="k">as</span> pd</span><span class="ln"><span class="k">from</span> dsa <span class="k">import</span> dataset</span><span class="ln"></span><span class="ln"><span class="c"># every lesson ships with a real dataset</span></span><span class="ln">df = dataset.<span class="f">load</span>(<span class="s">"titanic"</span>)</span><span class="ln"></span><span class="ln"><span class="v">rates</span> = (df.<span class="f">groupby</span>(<span class="s">"pclass"</span>)[<span class="s">"survived"</span>]</span><span class="ln">           .<span class="f">mean</span>()</span><span class="ln">           .<span class="f">mul</span>(<span class="n">100</span>)</span><span class="ln">           .<span class="f">round</span>(<span class="n">1</span>))</span><span class="ln"></span><span class="ln"><span class="f">print</span>(<span class="v">rates</span>)</span></pre>
+        <div class="editor-out">
+          <div class="out-head"><span class="led"></span> Output console</div>
+          <div class="out-body" data-hero-out><span class="dim">Running…</span></div>
+        </div>
+      </div>
+
+      <div class="hero-float">
+        <span class="ring" aria-hidden="true"></span>
+        <span>
+          <b>72% complete</b>
+          <span>Python for Data Science</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- TOPIC MARQUEE                                                        -->
+<!-- ==================================================================== -->
+<div class="marquee" aria-label="Topics we cover">
+  <div class="marquee-track">
+    <a class="chip" href="#">Python</a><a class="chip" href="#">Pandas</a><a class="chip" href="#">NumPy</a>
+    <a class="chip" href="#">SQL</a><a class="chip" href="#">Machine Learning</a><a class="chip" href="#">Data Structures</a>
+    <a class="chip" href="#">Algorithms</a><a class="chip" href="#">Matplotlib</a><a class="chip" href="#">Java</a>
+    <a class="chip" href="#">C</a><a class="chip" href="#">C++</a><a class="chip" href="#">HTML</a>
+    <a class="chip" href="#">CSS</a><a class="chip" href="#">JavaScript</a><a class="chip" href="#">Statistics</a>
+    <a class="chip" href="#">Deep Learning</a>
+    <!-- duplicate set keeps the loop seamless -->
+    <a class="chip" href="#" aria-hidden="true" tabindex="-1">Python</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">Pandas</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">NumPy</a>
+    <a class="chip" href="#" aria-hidden="true" tabindex="-1">SQL</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">Machine Learning</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">Data Structures</a>
+    <a class="chip" href="#" aria-hidden="true" tabindex="-1">Algorithms</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">Matplotlib</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">Java</a>
+    <a class="chip" href="#" aria-hidden="true" tabindex="-1">C</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">C++</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">HTML</a>
+    <a class="chip" href="#" aria-hidden="true" tabindex="-1">CSS</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">JavaScript</a><a class="chip" href="#" aria-hidden="true" tabindex="-1">Statistics</a>
+    <a class="chip" href="#" aria-hidden="true" tabindex="-1">Deep Learning</a>
+  </div>
+</div>
+
+<!-- ==================================================================== -->
+<!-- LIVE LAB                                                             -->
+<!-- ==================================================================== -->
+<section class="section" id="lab">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">Live practice</span>
+      <h2>Write it. Run it. <span class="hl-u">Get graded</span> in seconds.</h2>
+      <p>
+        No downloads, no environment setup, no "it works on my machine". Python,
+        SQL and algorithm challenges execute in the browser against real datasets
+        and a hidden test suite.
+      </p>
+    </div>
+
+    <div class="lab">
+      <div class="rv">
+        <div class="tabs" role="tablist" aria-label="Demo language">
+          <button class="tab" role="tab" data-tab="python" aria-selected="true">Python + pandas</button>
+          <button class="tab" role="tab" data-tab="sql" aria-selected="false">SQL</button>
+          <button class="tab" role="tab" data-tab="dsa" aria-selected="false">Algorithms</button>
+        </div>
+
+        <div class="editor">
+          <div class="editor-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="editor-file" data-file>sales_analysis.py</span>
+            <span class="editor-badge" data-lang>Python 3.12 · pandas</span>
+          </div>
+          <pre class="code" data-code></pre>
+          <div class="run-row">
+            <button class="btn sm" data-run>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M2.5 1.6 10 6l-7.5 4.4z"/></svg>
+              Run
+            </button>
+            <span class="run-hint">⌘ + ⏎ to execute</span>
+          </div>
+          <div class="editor-out">
+            <div class="out-head"><span class="led"></span> Output console</div>
+            <div class="out-body" data-out><span class="dim">Press Run to execute.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lab-side rv" data-d="1">
+        <div class="cell">
+          <span class="ic" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.8 1.5 3 10.2h4.6L6.8 16.5 14 7.6H9.2z"/></svg>
+          </span>
+          <h4>Instant execution</h4>
+          <p>Sandboxed runtime starts in under a second. Iterate as fast as you can type.</p>
+        </div>
+        <div class="cell t-cyan">
+          <span class="ic" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="9" cy="4.2" rx="6" ry="2.4"/><path d="M3 4.2v9.6c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4V4.2M3 9c0 1.3 2.7 2.4 6 2.4s6-1.1 6-2.4"/></svg>
+          </span>
+          <h4>Real datasets</h4>
+          <p>Messy, realistic CSVs and seeded Postgres schemas — not toy three-row examples.</p>
+        </div>
+        <div class="cell t-amber">
+          <span class="ic" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9.4 6.6 13.5 15.5 4.6"/></svg>
+          </span>
+          <h4>Instant grading</h4>
+          <p>Hidden tests tell you exactly which edge case broke, with a hint before the answer.</p>
+        </div>
+        <div class="cell t-violet">
+          <span class="ic" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 1.5 2 5.2 9 9l7-3.8z"/><path d="M2 9.2 9 13l7-3.8M2 12.8 9 16.5l7-3.7"/></svg>
+          </span>
+          <h4>Saved forever</h4>
+          <p>Every submission is versioned. Come back in six months and your notebook is still there.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- WHY                                                                  -->
+<!-- ==================================================================== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow is-cyan">Why learners stay</span>
+      <h2>Built for people who need the job, not the certificate.</h2>
+    </div>
+
+    <div class="grid-frame c4">
+      <article class="cell rv">
+        <span class="num">01</span>
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="5.4" r="3.1"/><path d="M2.6 16c0-3.2 2.9-5.2 6.4-5.2s6.4 2 6.4 5.2"/></svg></span>
+        <h3>Taught by practitioners</h3>
+        <p>Every track is authored by engineers and analysts who do this work daily — the shortcuts and the war stories come with it.</p>
+      </article>
+      <article class="cell t-cyan rv" data-d="1">
+        <span class="num">02</span>
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 14.5V8.2M6.8 14.5V3.5M11.2 14.5v-7M15.5 14.5v-10"/></svg></span>
+        <h3>Portfolio you can show</h3>
+        <p>Finish a specialization and you leave with three deployed projects and a repo a recruiter can actually read.</p>
+      </article>
+      <article class="cell t-amber rv" data-d="2">
+        <span class="num">03</span>
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="9" r="7"/><path d="M9 4.8V9l3 1.8"/></svg></span>
+        <h3>Learn on your schedule</h3>
+        <p>Bite-sized topics, resumable progress, and offline-friendly notes. Twenty minutes on a commute is enough to move forward.</p>
+      </article>
+      <article class="cell t-violet rv" data-d="3">
+        <span class="num">04</span>
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 1.6 15.4 4.4v4.4c0 3.6-2.7 6.4-6.4 7.6-3.7-1.2-6.4-4-6.4-7.6V4.4z"/><path d="M6.6 9 8.4 10.8 11.6 7.4"/></svg></span>
+        <h3>Job-ready support</h3>
+        <p>Mock interviews, CV-driven question sets and a community that answers in hours, not weeks.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- STATS BAND                                                           -->
+<!-- ==================================================================== -->
+<section class="band">
+  <div class="wrap">
+    <dl class="stats">
+      <div class="stat rv"><dt><span data-count="42" data-suffix="k+">0</span></dt><dd>Learners practising every month</dd></div>
+      <div class="stat rv" data-d="1"><dt><span data-count="1200" data-suffix="+">0</span></dt><dd>Graded coding problems</dd></div>
+      <div class="stat rv" data-d="2"><dt><span data-count="96" data-suffix="%">0</span></dt><dd>Finish the first project they start</dd></div>
+      <div class="stat rv" data-d="3"><dt><span data-count="11" data-suffix="">0</span></dt><dd>Language and framework tracks</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- SPECIALIZATIONS                                                      -->
+<!-- ==================================================================== -->
+<section class="section" id="paths">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">Career specializations</span>
+      <h2>Pick the role. We'll sequence the rest.</h2>
+      <p>A specialization is a curated run of courses, labs and projects ordered so nothing ever depends on something you haven't learned yet.</p>
+    </div>
+
+    <div class="cards c3">
+      <a class="card path rv" href="/program/data-science-specialization/specialization/">
+        <span class="idx">PATH 01</span>
+        <h3>Data Science</h3>
+        <p>Python, pandas and statistics through to model evaluation and a deployed prediction service.</p>
+        <div class="skills">
+          <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Scikit-learn</span><span class="chip">Stats</span>
+        </div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <div class="card-foot">
+          <span class="card-meta"><span>6 courses</span><span>·</span><span>~48 h</span></span>
+          <span class="txtlink">Explore <svg class="arw" width="13" height="13" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card path t-cyan rv" data-d="1" href="/program/business-intelligence-data-analyst/specialization/">
+        <span class="idx">PATH 02</span>
+        <h3>BI &amp; Data Analyst</h3>
+        <p>SQL depth, warehouse modelling and dashboards that answer a business question in one screen.</p>
+        <div class="skills">
+          <span class="chip">SQL</span><span class="chip">Modelling</span><span class="chip">Dashboards</span><span class="chip">Excel</span>
+        </div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <div class="card-foot">
+          <span class="card-meta"><span>5 courses</span><span>·</span><span>~36 h</span></span>
+          <span class="txtlink">Explore <svg class="arw" width="13" height="13" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card path t-amber rv" data-d="2" href="/program/full-stack-engineer-career-path/specialization/">
+        <span class="idx">PATH 03</span>
+        <h3>Full-Stack Engineer</h3>
+        <p>From semantic HTML to an authenticated API, a database schema and a production deploy.</p>
+        <div class="skills">
+          <span class="chip">JavaScript</span><span class="chip">HTML/CSS</span><span class="chip">APIs</span><span class="chip">Deploy</span>
+        </div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <div class="card-foot">
+          <span class="card-meta"><span>8 courses</span><span>·</span><span>~64 h</span></span>
+          <span class="txtlink">Explore <svg class="arw" width="13" height="13" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card path t-violet rv" href="/program/front-end-engineer-career-path/specialization/">
+        <span class="idx">PATH 04</span>
+        <h3>Front-End Engineer</h3>
+        <p>Layout, state and accessibility — building interfaces that hold up on a real device, not just a mockup.</p>
+        <div class="skills">
+          <span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">A11y</span><span class="chip">Perf</span>
+        </div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <div class="card-foot">
+          <span class="card-meta"><span>6 courses</span><span>·</span><span>~42 h</span></span>
+          <span class="txtlink">Explore <svg class="arw" width="13" height="13" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card path rv" data-d="1" href="/program/python-for-developer/specialization/">
+        <span class="idx">PATH 05</span>
+        <h3>Python for Developers</h3>
+        <p>The language properly: data model, typing, testing, packaging and the standard library you never read.</p>
+        <div class="skills">
+          <span class="chip">Python</span><span class="chip">Testing</span><span class="chip">Typing</span><span class="chip">Tooling</span>
+        </div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <div class="card-foot">
+          <span class="card-meta"><span>5 courses</span><span>·</span><span>~30 h</span></span>
+          <span class="txtlink">Explore <svg class="arw" width="13" height="13" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" data-d="2" href="/program/" style="justify-content:center;align-items:flex-start;background:transparent;border-style:dashed">
+        <span class="eyebrow" style="margin-bottom:14px">All programmes</span>
+        <h3 style="margin-top:0">See every specialization</h3>
+        <p>Compare outcomes, length and prerequisites side by side before you commit.</p>
+        <span class="txtlink" style="margin-top:22px">Browse all <svg class="arw" width="13" height="13" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PLAYGRAM                                                             -->
+<!-- ==================================================================== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap split">
+    <div class="split-copy rv">
+      <span class="eyebrow is-violet" style="color:var(--violet)">Playgram</span>
+      <h2>Data structures and algorithms, with a judge that explains itself.</h2>
+      <p class="lead">
+        1,200+ problems from array warm-ups to graph traversal. Submit and you get
+        the failing case, the complexity of your solution, and how it compares to
+        everyone else's.
+      </p>
+      <ul class="checks">
+        <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 8 6 11.4 12.4 4"/></svg> Hidden test suites with readable failure output</li>
+        <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 8 6 11.4 12.4 4"/></svg> Runtime and memory benchmarked against the cohort</li>
+        <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 8 6 11.4 12.4 4"/></svg> Progressive hints — nudge first, solution last</li>
+      </ul>
+      <div class="hero-cta"><a class="btn ghost" href="/dsa-playgram/">Open Playgram</a></div>
+    </div>
+
+    <div class="panel rv" data-d="1">
+      <div class="panel-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span> runtime distribution — two_sum.py</div>
+      <div class="panel-body">
+        <div class="viz-row">
+          <i style="height:22%"></i><i style="height:38%"></i><i style="height:56%"></i>
+          <i style="height:74%"></i><i style="height:92%"></i><i class="hot" style="height:68%"></i>
+          <i style="height:48%"></i><i style="height:34%"></i><i style="height:24%"></i>
+          <i style="height:15%"></i><i style="height:9%"></i><i style="height:6%"></i>
+        </div>
+        <div class="viz-legend">
+          <span><b style="background:var(--cyan)"></b> All submissions</span>
+          <span><b style="background:var(--acid)"></b> Your run — 41 ms, beats 96%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- SQL LAB                                                              -->
+<!-- ==================================================================== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap split rev">
+    <div class="split-copy rv">
+      <span class="eyebrow is-cyan">SQL Lab</span>
+      <h2>A real database, seeded and waiting, on every lesson page.</h2>
+      <p class="lead">
+        Design the schema, break it, fix it. Joins, window functions and query
+        plans against a live Postgres instance that resets whenever you want a
+        clean slate.
+      </p>
+      <ul class="checks">
+        <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 8 6 11.4 12.4 4"/></svg> Aggregation, window functions and CTEs</li>
+        <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 8 6 11.4 12.4 4"/></svg> Schema design exercises with constraint checking</li>
+        <li><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 8 6 11.4 12.4 4"/></svg> EXPLAIN output translated into plain English</li>
+      </ul>
+      <div class="hero-cta"><a class="btn ghost" href="#courses">Try a SQL lesson</a></div>
+    </div>
+
+    <div class="panel rv" data-d="1">
+      <div class="panel-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span> result — 5 rows · 18 ms</div>
+      <div class="panel-body" style="padding:6px 10px 10px">
+        <table class="tbl">
+          <thead><tr><th>customer</th><th>orders</th><th>lifetime value</th></tr></thead>
+          <tbody>
+            <tr><td>Meridian Labs</td><td>31</td><td><b>48,210.00</b></td></tr>
+            <tr><td>Halcyon Retail</td><td>27</td><td><b>41,905.60</b></td></tr>
+            <tr><td>Northwind Co.</td><td>22</td><td><b>37,440.15</b></td></tr>
+            <tr><td>Ardent Analytics</td><td>19</td><td><b>29,118.80</b></td></tr>
+            <tr><td>Blue Harbor Ltd</td><td>14</td><td><b>22,730.45</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- COURSES                                                              -->
+<!-- ==================================================================== -->
+<section class="section" id="courses" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow is-amber">Foundation courses</span>
+      <h2>Or start with a single language and go deep.</h2>
+      <p>Free to registered users. Each course is a sequence of short topics, each ending in code you run yourself.</p>
+    </div>
+
+    <div class="cards c4">
+      <a class="card rv" href="/course/python-for-data-science/">
+        <span class="thumb"><span class="glyph">Py</span></span>
+        <h3>Python for Data Science</h3>
+        <p>Syntax, data structures and the analysis workflow end to end.</p>
+        <div class="card-foot"><span class="card-meta"><span>42 topics</span><span>·</span><span>Beginner</span></span><span class="chip solid">Free</span></div>
+      </a>
+      <a class="card rv" data-d="1" href="/course/pandas/">
+        <span class="thumb t-cyan"><span class="glyph">pd</span></span>
+        <h3>Pandas</h3>
+        <p>Selecting, cleaning, reshaping and aggregating messy real-world tables.</p>
+        <div class="card-foot"><span class="card-meta"><span>50 topics</span><span>·</span><span>Beginner</span></span><span class="chip solid">Free</span></div>
+      </a>
+      <a class="card rv" data-d="2" href="/course/machine-learning/">
+        <span class="thumb t-amber"><span class="glyph">ML</span></span>
+        <h3>Machine Learning</h3>
+        <p>Regression to ensembles, with honest evaluation and leakage traps.</p>
+        <div class="card-foot"><span class="card-meta"><span>38 topics</span><span>·</span><span>Intermediate</span></span><span class="chip solid">Free</span></div>
+      </a>
+      <a class="card rv" data-d="3" href="/course/data-structures-and-algarithm-full-course/">
+        <span class="thumb t-violet"><span class="glyph">DSA</span></span>
+        <h3>Data Structures &amp; Algorithms</h3>
+        <p>The interview canon — arrays, trees, graphs, dynamic programming.</p>
+        <div class="card-foot"><span class="card-meta"><span>64 topics</span><span>·</span><span>All levels</span></span><span class="chip solid">Free</span></div>
+      </a>
+      <a class="card rv" href="/course/numpy/">
+        <span class="thumb t-rose"><span class="glyph">np</span></span>
+        <h3>NumPy</h3>
+        <p>Vectorised thinking, broadcasting and the array API underneath everything.</p>
+        <div class="card-foot"><span class="card-meta"><span>28 topics</span><span>·</span><span>Beginner</span></span><span class="chip solid">Free</span></div>
+      </a>
+      <a class="card rv" data-d="1" href="/course-detail/java-fundamentals/">
+        <span class="thumb"><span class="glyph">Jv</span></span>
+        <h3>Java Fundamentals</h3>
+        <p>Types, control flow, methods and error handling as a working mental model.</p>
+        <div class="card-foot"><span class="card-meta"><span>35 topics</span><span>·</span><span>Beginner</span></span><span class="chip solid">Free</span></div>
+      </a>
+      <a class="card rv" data-d="2" href="/course/matplotlib/">
+        <span class="thumb t-cyan"><span class="glyph">plt</span></span>
+        <h3>Matplotlib</h3>
+        <p>Charts that communicate — axes, scales and when not to use a pie.</p>
+        <div class="card-foot"><span class="card-meta"><span>24 topics</span><span>·</span><span>Beginner</span></span><span class="chip solid">Free</span></div>
+      </a>
+      <a class="card rv" data-d="3" href="/all_courses/">
+        <span class="thumb t-amber"><span class="glyph">+</span></span>
+        <h3>Browse all courses</h3>
+        <p>C, C++, HTML, CSS, SQL and everything else in the catalogue.</p>
+        <div class="card-foot"><span class="card-meta"><span>11 tracks</span></span><span class="txtlink">View all</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- INTERVIEW PRACTICE                                                   -->
+<!-- ==================================================================== -->
+<section class="section" id="interview" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">Interview practice</span>
+      <h2>Rehearse the interview before it costs you the offer.</h2>
+      <p>Two ways in. Upload the CV you're actually sending out, or pick a prepared set for the role you're targeting.</p>
+    </div>
+
+    <div class="opt-grid">
+      <article class="opt rv">
+        <span class="tagline">Option 01</span>
+        <h3>Upload your CV</h3>
+        <p>We read the roles, tools and claims on your CV and generate the questions a panel would actually ask you about them — including the uncomfortable ones.</p>
+        <div class="dropzone">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 10px"><path d="M11 15V4M6.6 8.4 11 4l4.4 4.4"/><path d="M3 14v3.5A1.5 1.5 0 0 0 4.5 19h13a1.5 1.5 0 0 0 1.5-1.5V14"/></svg>
+          Drop your CV here — PDF or DOCX
+        </div>
+        <div class="hero-cta"><a class="btn block" href="/interview/start-choice/">Generate my questions</a></div>
+      </article>
+
+      <article class="opt rv" data-d="1">
+        <span class="tagline">Option 02</span>
+        <h3>Preselected question sets</h3>
+        <p>Curated banks by role and seniority, each with a model answer, the follow-up you should expect, and what the interviewer is really testing.</p>
+        <ul class="qlist">
+          <li>Explain a join you'd never use, and why <span class="lvl med">Medium</span></li>
+          <li>Walk me through a model that failed in production <span class="lvl hard">Hard</span></li>
+          <li>What does <code style="font-family:var(--ff-mono);font-size:12.5px">groupby</code> actually return? <span class="lvl easy">Easy</span></li>
+          <li>Design a schema for order returns <span class="lvl hard">Hard</span></li>
+        </ul>
+        <div class="hero-cta"><a class="btn ghost block" href="/interview/start-choice/">Browse question sets</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- TESTIMONIALS                                                         -->
+<!-- ==================================================================== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow is-amber">From learners</span>
+      <h2>What people say once they've shipped something.</h2>
+    </div>
+
+    <div class="cards c3">
+      <figure class="quote rv">
+        <span class="stars" aria-label="5 out of 5">★★★★★</span>
+        <blockquote>"I'd done three video courses and still couldn't start a project from an empty file. The graded exercises here fixed that in about six weeks."</blockquote>
+        <figcaption><span class="avatar">RK</span><span><b>Riya K.</b><span>Junior Data Analyst</span></span></figcaption>
+      </figure>
+      <figure class="quote rv" data-d="1">
+        <span class="stars" aria-label="5 out of 5">★★★★★</span>
+        <blockquote>"Playgram's failure output is the best I've used. It shows the case that broke instead of a red X, so you actually learn the pattern."</blockquote>
+        <figcaption><span class="avatar c2">DM</span><span><b>Daniel M.</b><span>Backend Engineer</span></span></figcaption>
+      </figure>
+      <figure class="quote rv" data-d="2">
+        <span class="stars" aria-label="5 out of 5">★★★★★</span>
+        <blockquote>"The CV-based interview questions were uncomfortably accurate. Two of them came up almost word for word in my second round."</blockquote>
+        <figcaption><span class="avatar c3">AO</span><span><b>Amara O.</b><span>Data Scientist</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- INSTITUTIONS                                                         -->
+<!-- ==================================================================== -->
+<section class="section" id="institutions" style="padding-top:0">
+  <div class="wrap">
+    <div class="inst rv">
+      <div>
+        <span class="eyebrow is-cyan">For institutions</span>
+        <h2>Upskilling a cohort, a department or a whole workforce programme?</h2>
+        <p>Managed cohorts, seat licensing, progress reporting and assessments mapped to your own curriculum — with a dashboard your programme lead can defend in a board meeting.</p>
+        <div class="hero-cta">
+          <a class="btn" href="/institutional/contact/">Talk to us</a>
+          <a class="btn ghost" href="/institutional/about/">How it works</a>
+        </div>
+      </div>
+      <div class="inst-facts">
+        <div><b>Cohort management</b><span>Invite by CSV, group by intake, track completion per learner</span></div>
+        <div><b>Assessment mapping</b><span>Align graded work to your own module outcomes</span></div>
+        <div><b>Reporting</b><span>Exportable engagement and attainment data</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- BLOG                                                                 -->
+<!-- ==================================================================== -->
+<section class="section" id="blog" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head rv">
+      <span class="eyebrow">Writing</span>
+      <h2>Notes from the team.</h2>
+    </div>
+    <div class="cards c3">
+      <a class="card rv" href="/post-detail/top-10-big-data-tools-for-analysis/">
+        <span class="card-meta" style="color:var(--fg-3)">12 Aug 2026 · 8 min</span>
+        <h3>Top 10 big data tools for analysis</h3>
+        <p>Which of them you'll actually touch in a first analytics job, and which are résumé décor.</p>
+        <div class="card-foot"><span class="chip cyan">Tooling</span><span class="txtlink">Read</span></div>
+      </a>
+      <a class="card rv" data-d="1" href="/post-detail/best-programming-problem-solving-platforms-you-should-use-in-2026/">
+        <span class="card-meta" style="color:var(--fg-3)">04 Aug 2026 · 6 min</span>
+        <h3>Best problem-solving platforms in 2026</h3>
+        <p>An honest comparison of where to grind, including where we fall short.</p>
+        <div class="card-foot"><span class="chip amber">Practice</span><span class="txtlink">Read</span></div>
+      </a>
+      <a class="card rv" data-d="2" href="/post-detail/uncovering-the-missing-number-practical-strategie/">
+        <span class="card-meta" style="color:var(--fg-3)">28 Jul 2026 · 5 min</span>
+        <h3>Uncovering the missing number</h3>
+        <p>Four solutions to one classic problem, ranked by what an interviewer wants to hear.</p>
+        <div class="card-foot"><span class="chip violet">Algorithms</span><span class="txtlink">Read</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- FINAL CTA                                                            -->
+<!-- ==================================================================== -->
+<section class="section final">
+  <div class="wrap">
+    <span class="eyebrow rv" style="justify-content:center">Free to start</span>
+    <h2 class="rv" data-d="1">Your first project is<br>four minutes away.</h2>
+    <p class="rv" data-d="2">Create an account, open any course, and write your first graded line of code before you've finished your coffee.</p>
+    <div class="hero-cta rv" data-d="3">
+      <a class="btn lg" href="/logusers/register_user/">Start Learning Free
+        <svg class="arw" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4"/></svg>
+      </a>
+      <a class="btn ghost lg" href="/institutional/contact/">For Institutions</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================================================================== -->
+<!-- FOOTER                                                               -->
+<!-- ==================================================================== -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><rect x="1" y="9" width="3.4" height="7" rx="1" fill="#0A0D08"/><rect x="6.8" y="5" width="3.4" height="11" rx="1" fill="#0A0D08"/><rect x="12.6" y="1" width="3.4" height="15" rx="1" fill="#0A0D08"/></svg>
+          </span>
+          <span class="brand-name">Data Skills Academy<small>Learn by building</small></span>
+        </a>
+        <p class="blurb">Practical data, AI and programming education for people who need to do the job, not just pass the quiz.</p>
+      </div>
+      <div>
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="/all_courses/">All courses</a></li>
+          <li><a href="/program/">Specializations</a></li>
+          <li><a href="/dsa-playgram/">Playgram</a></li>
+          <li><a href="/quiz/">Quizzes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="/interview/start-choice/">Interview prep</a></li>
+          <li><a href="/dsa-playgram/guide/">Playgram guide</a></li>
+          <li><a href="/post/">Blog</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Institutions</h5>
+        <ul>
+          <li><a href="/institutional/about/">Overview</a></li>
+          <li><a href="/institutional/contact/">Contact</a></li>
+          <li><a href="/institutional/student/join/">Join a cohort</a></li>
+          <li><a href="/Instructor/register/">Teach with us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/privacy-policy/">Privacy</a></li>
+          <li><a href="/refund-policy/">Refunds</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <span>© 2026 Data Skills Academy. All rights reserved.</span>
+      <nav>
+        <a href="/cookie-policy/">Cookie policy</a>
+        <a href="/acceptable-use/">Acceptable use</a>
+        <a href="/community-guidelines/">Community guidelines</a>
+        <a href="/impressum/">Impressum</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/dsa.js"></script>
+</body>
+</html>
