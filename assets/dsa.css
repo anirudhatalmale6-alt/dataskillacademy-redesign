@@ -338,7 +338,7 @@ p { margin: 0; text-wrap: pretty; }
 
 /* floating stat card over the editor */
 .hero-float {
-  position: absolute; left: -26px; bottom: 44px;
+  position: absolute; left: -30px; bottom: -22px;
   background: var(--surface-2); border: 1px solid var(--line);
   border-radius: var(--r); padding: 12px 15px;
   box-shadow: 0 24px 50px -24px rgba(0,0,0,.9);
